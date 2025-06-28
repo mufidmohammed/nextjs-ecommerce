@@ -1,10 +1,26 @@
+'use client'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import { SocialIcons } from '@/components/socials'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import React, { useState } from 'react'
 
 const Contact: NextPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: 'Product Inquiry',
+    message: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // udpate form logic
+    // send data to api
+  }
+
   const contactMethods = [
     {
       icon: (
@@ -92,7 +108,7 @@ const Contact: NextPage = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <div id="contact-form" className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div>
@@ -111,7 +127,7 @@ const Contact: NextPage = () => {
             </div>
             <div className="mt-12 lg:mt-0">
               <div className="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
-                <form className="mb-0 space-y-6">
+                <form onSubmit={handleSubmit} className="mb-0 space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                       Full name
@@ -121,6 +137,8 @@ const Contact: NextPage = () => {
                         id="name"
                         name="name"
                         type="text"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         required
                         className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                       />
@@ -137,6 +155,8 @@ const Contact: NextPage = () => {
                         name="email"
                         type="email"
                         autoComplete="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         required
                         className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                       />
@@ -152,6 +172,8 @@ const Contact: NextPage = () => {
                         id="phone"
                         name="phone"
                         type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                       />
                     </div>
@@ -165,8 +187,11 @@ const Contact: NextPage = () => {
                       <select
                         id="subject"
                         name="subject"
+                        value={formData.subject}
+                        onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                       >
+                        <option value="">-- Select a subject --</option>
                         <option>Product Inquiry</option>
                         <option>Order Support</option>
                         <option>Returns & Exchanges</option>
@@ -185,6 +210,8 @@ const Contact: NextPage = () => {
                         id="message"
                         name="message"
                         rows={4}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         required
                         className="w-full border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                       />
