@@ -66,12 +66,15 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center">
-            <button className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <Link 
+              href="/cart" 
+              className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none 
+                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               <span className="sr-only">View cart</span>
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
