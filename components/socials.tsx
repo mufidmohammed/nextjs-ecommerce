@@ -23,3 +23,21 @@ export const AudioIcon = ({ className = 'h-8 w-8 text-indigo-600' }: { className
     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
   </svg>
 );
+
+
+export const SocialIcons = () => (
+  <div className="flex space-x-6">
+    <a href="#" className="text-gray-400 hover:text-gray-300">
+      <span className="sr-only">Facebook</span>
+      <FacebookIcon />
+    </a>
+    <a href="#" className="text-gray-400 hover:text-gray-300">
+      <span className="sr-only">Instagram</span>
+      <InstagramIcon />
+    </a>
+    <a href="#" className="text-gray-400 hover:text-gray-300">
+      <span className="sr-only">Twitter</span>
+      <TwitterIcon />
+    </a>
+  </div>
+);
