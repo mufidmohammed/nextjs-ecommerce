@@ -1,6 +1,8 @@
 import { NextPage } from 'next'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+import clsx from 'clsx'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   const products = [
@@ -50,6 +52,11 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Products | AudioShop</title>
+        <meta name="description" content="List of products available" />
+      </Head>
+      
       <Navbar />
 
       {/* Hero Section */}
@@ -57,7 +64,7 @@ const Home: NextPage = () => {
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            src="images/about-hero.jpeg"
             alt=""
           />
           <div className="absolute inset-0 bg-gray-900 mix-blend-multiply" aria-hidden="true" />
@@ -113,7 +120,14 @@ const Home: NextPage = () => {
                     {[...Array(5)].map((_, i) => (
                       <svg
                         key={i}
-                        className={`h-5 w-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-200'}`}
+                        // className={`h-5 w-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-200'}`}
+                        className={clsx(
+                          'h-5 w-5',
+                          {
+                            'text-yellow-400' : i < Math.floor(product.rating),
+                            'text-gray-200' : i >= Math.floor(product.rating)
+                          }
+                        )}
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >

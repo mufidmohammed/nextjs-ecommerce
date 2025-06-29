@@ -1,15 +1,16 @@
 "use client"
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+import clsx from 'clsx'
 import Head from 'next/head'
-import { useState } from 'react'
+import { use, useState } from 'react'
 
 interface ProductDetailProps {
     params: { id: string }
 }
 
-const ProductDetail = async ({ params }: ProductDetailProps) => {
-  const { id } = params
+const ProductDetail = ({ params }: ProductDetailProps) => {
+  const { id } = use(params)
 
   // Product data - in a real app, this would come from an API
   const product = {
@@ -216,7 +217,15 @@ const ProductDetail = async ({ params }: ProductDetailProps) => {
                       type="button"
                       disabled={!size.inStock}
                       onClick={() => setSelectedSize(size)}
-                      className={`py-2 px-3 border rounded-md text-sm font-medium ${size.inStock ? 'hover:bg-gray-50' : 'opacity-50 cursor-not-allowed'} ${selectedSize.name === size.name ? 'bg-indigo-50 border-indigo-500 text-indigo-600' : 'border-gray-300 text-gray-900'}`}
+                      // className={`py-2 px-3 border rounded-md text-sm font-medium ${size.inStock ? 'hover:bg-gray-50' : 'opacity-50 cursor-not-allowed'} ${selectedSize.name === size.name ? 'bg-indigo-50 border-indigo-500 text-indigo-600' : 'border-gray-300 text-gray-900'}`}
+                      className={clsx('py-2 px-3 border rounded-md text-sm font-medium',
+                        {
+                          'hover:bg-gray-50' : size.inStock,
+                          'opacity-50 cursor-not-allowed' : !size.inStock,
+                          'bg-indigo-50 border-indigo-500 text-indigo-600': selectedSize.name === size.name,
+                          'border-gray-300 text-gray-900' : selectedSize.name !== size.name,
+                        }
+                      )}
                     >
                       {size.name}
                     </button>

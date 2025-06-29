@@ -133,7 +133,7 @@ const Cart: NextPage = () => {
                               {item.name}
                             </h4>
                             <p className="ml-4 text-sm font-medium text-gray-900">
-                              ${(item.price * item.quantity).toFixed(2)}
+                              Ghc{(item.price * item.quantity).toFixed(2)}
                             </p>
                           </div>
                           <p className="mt-1 text-sm text-gray-500">
@@ -198,7 +198,7 @@ const Cart: NextPage = () => {
                 <div className="flex items-center justify-between">
                   <dt className="text-sm text-gray-600">Subtotal</dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    ${subtotal.toFixed(2)}
+                    Ghc{subtotal.toFixed(2)}
                   </dd>
                 </div>
                 <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
@@ -206,7 +206,7 @@ const Cart: NextPage = () => {
                     <span>Shipping estimate</span>
                   </dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    ${shipping.toFixed(2)}
+                    Ghc{shipping.toFixed(2)}
                   </dd>
                 </div>
                 <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
@@ -214,7 +214,7 @@ const Cart: NextPage = () => {
                     <span>Tax estimate</span>
                   </dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    ${tax.toFixed(2)}
+                    Ghc{tax.toFixed(2)}
                   </dd>
                 </div>
                 <div className="border-t border-gray-200 pt-4 flex items-center justify-between">
@@ -222,7 +222,7 @@ const Cart: NextPage = () => {
                     Order total
                   </dt>
                   <dd className="text-base font-medium text-gray-900">
-                    ${total.toFixed(2)}
+                    Ghc{total.toFixed(2)}
                   </dd>
                 </div>
               </dl>
@@ -231,7 +231,6 @@ const Cart: NextPage = () => {
                 <button
                   type="button"
                   disabled={cartItems.length === 0}
-                  // className={`w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${cartItems.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                   className={clsx(
                     'w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
                     {
