@@ -9,21 +9,21 @@ const Home: NextPage = () => {
     {
       id: 1,
       name: 'Premium Headphones',
-      price: '$199.99',
+      price: 'Ghc199.99',
       rating: 4.5,
       image: '/images/headphones.jpeg',
     },
     {
       id: 2,
       name: 'Wireless Earbuds',
-      price: '$129.99',
+      price: 'Ghc129.99',
       rating: 4.2,
       image: '/images/earbuds.jpeg',
     },
     {
       id: 3,
       name: 'Bluetooth Speaker',
-      price: '$89.99',
+      price: 'Ghc89.99',
       rating: 4.7,
       image: '/images/speaker.jpeg',
     },
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
           </p>
           <div className="mt-10">
             <a
-              href="#"
+              href="/products"
               className="inline-block bg-indigo-500 border border-transparent py-3 px-8 rounded-md font-medium text-white hover:bg-indigo-600"
             >
               Shop Now
