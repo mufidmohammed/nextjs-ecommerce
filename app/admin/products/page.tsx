@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { PencilIcon, TrashIcon, PlusIcon } from '@heroicons/react/24/outline'
 import ProductsTable from './ProductsTable'
-import Search from '@/components/admin/search'
 
 
 interface Product {
