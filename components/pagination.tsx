@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-export default function Pagination({ totalItems, itemsPerPage = 5, currentPage = 1 }: {
+export default function Pagination({ totalItems, currentPage = 1, itemsPerPage = 5 }: {
   totalItems: number
   itemsPerPage?: number
   currentPage?: number

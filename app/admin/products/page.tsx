@@ -3,9 +3,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { PencilIcon, TrashIcon, PlusIcon } from '@heroicons/react/24/outline'
 import ProductsTable from './ProductsTable'
+import Search from '@/components/admin/search'
 
 
- interface Product {
+interface Product {
   id: string
   name: string
   category: string
@@ -18,7 +19,7 @@ import ProductsTable from './ProductsTable'
 const AdminProducts: NextPage = () => {
 
   // Sample product data - in a real app, this would come from an API
-  const products : Product[] = [
+  const products: Product[] = [
     {
       id: '1',
       name: 'Premium Wireless Headphones',
@@ -103,6 +104,7 @@ const AdminProducts: NextPage = () => {
       <div className="mt-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+
             {/* Search and filter bar */}
             <div className="px-4 py-5 sm:px-6 border-b border-gray-200 sm:flex sm:items-center sm:justify-between">
               <div className="w-full max-w-lg lg:max-w-xs">
@@ -161,7 +163,7 @@ const AdminProducts: NextPage = () => {
 
             {/* Product table */}
             <ProductsTable products={products} />
-          
+
           </div>
         </div>
       </div>
