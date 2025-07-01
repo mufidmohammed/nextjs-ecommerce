@@ -1,6 +1,6 @@
 'use client'
 import Pagination from "@/components/pagination"
-import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline"
+import { Pencil, Trash, Trash2 } from "lucide-react"
 import Link from "next/link"
 
 interface Product {
@@ -116,13 +116,13 @@ export default function ProductsTable({ products }: { products: Product[] }) {
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <Link href={`/admin/products/${product.id}/edit`}
                     className="text-indigo-600 hover:text-indigo-900 mr-4">
-                    <PencilIcon className="h-5 w-5 inline" />
+                    <Pencil className="h-5 w-5 inline" />
                   </Link>
                   <button
                     // onClick={() => deleteProduct(product.id)}
                     className="text-red-600 hover:text-red-900"
                   >
-                    <TrashIcon className="h-5 w-5 inline" />
+                    <Trash2 className="h-5 w-5 inline" />
                   </button>
                 </td>
               </tr>

@@ -1,4 +1,4 @@
-import { CheckIcon, EyeIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Check, Eye, X } from "lucide-react"
 import Link from "next/link";
 
 interface Order {
@@ -107,16 +107,16 @@ export default function OdersTable({ orders }: { orders: Order[] }) {
                   href={`/admin/orders/${order.id}`}
                   className="text-indigo-600 hover:text-indigo-900 mr-4"
                 >
-                  <EyeIcon className="h-5 w-5 inline" />
+                  <Eye className="h-5 w-5 inline" />
                 </Link>
                 {order.status === 'pending' && (
                   <button className="text-green-600 hover:text-green-900 mr-4">
-                    <CheckIcon className="h-5 w-5 inline" />
+                    <Check className="h-5 w-5 inline" />
                   </button>
                 )}
                 {order.status === 'pending' && (
                   <button className="text-red-600 hover:text-red-900">
-                    <XMarkIcon className="h-5 w-5 inline" />
+                    <X className="h-5 w-5 inline" />
                   </button>
                 )}
               </td>

@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { ArrowLeftIcon } from '@heroicons/react/24/outline'
+import { ArrowLeft } from 'lucide-react'
 
 const CreateProductPage: NextPage = () => {
   return (
@@ -21,7 +21,7 @@ const CreateProductPage: NextPage = () => {
                     href="/admin/products"
                     className="mr-4 text-gray-400 hover:text-gray-500"
                   >
-                    <ArrowLeftIcon className="h-5 w-5" />
+                    <ArrowLeft className="h-5 w-5" />
                   </Link>
                   <h1 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                     Create New Product

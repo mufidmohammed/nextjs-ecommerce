@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import {
-  ChartBarIcon,
-  ShoppingBagIcon,
-  UsersIcon,
+  ChartBar,
+  ShoppingBag,
+  Users,
   CogIcon,
-  ArrowRightOnRectangleIcon,
-  ArrowTrendingUpIcon,
-  ClockIcon,
-} from '@heroicons/react/24/outline';
+  LogOut,
+  TrendingUp,
+  Clock,
+  ChartBarStacked,
+} from "lucide-react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
@@ -34,7 +35,7 @@ export default function Sidebar() {
                   }
                 )}
                 >
-                  <ChartBarIcon className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
+                  <ChartBar className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
                   Dashboard
               </Link>
               <Link href="/admin/products"
@@ -47,7 +48,7 @@ export default function Sidebar() {
                   }
                 )}
                 >
-                  <ShoppingBagIcon className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
+                  <ShoppingBag className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
                   Products
               </Link>
               <Link href="/admin/orders"
@@ -59,7 +60,7 @@ export default function Sidebar() {
                   }
                 )}
                 >
-                  <ClockIcon className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
+                  <Clock className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
                   Orders
               </Link>
               <Link href="/admin/customers"
@@ -71,7 +72,7 @@ export default function Sidebar() {
                   }
                 )}
                 >
-                  <UsersIcon className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
+                  <Users className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
                   Customers
               </Link>
               <Link href="/admin/reports"
@@ -82,7 +83,7 @@ export default function Sidebar() {
                     'text-indigo-100 hover:bg-indigo-600 hover:text-white': pathname !== '/admin/reports'
                   }
                 )}>
-                  <ArrowTrendingUpIcon className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
+                  <TrendingUp className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
                   Reports
               </Link>
               <Link href="/admin/settings"
@@ -102,7 +103,7 @@ export default function Sidebar() {
                 href="#"
                 className="text-indigo-100 hover:bg-indigo-600 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md"
               >
-                <ArrowRightOnRectangleIcon className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
+                <LogOut className="mr-3 h-6 w-6 flex-shrink-0 text-indigo-300" />
                 Logout
               </a>
             </div>

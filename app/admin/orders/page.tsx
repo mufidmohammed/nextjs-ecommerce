@@ -1,7 +1,5 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
-import { EyeIcon, CheckIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import OrdersTable from './OrdersTable'
 import Pagination from '@/components/pagination'
 import { Search } from 'lucide-react'

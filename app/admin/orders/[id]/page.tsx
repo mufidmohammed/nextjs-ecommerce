@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { ArrowLeftIcon, PrinterIcon, TruckIcon, CreditCardIcon } from '@heroicons/react/24/outline'
+import { ArrowLeft, Printer, Truck, CreditCard, Clock } from 'lucide-react'
 
 const ViewOrderPage: NextPage = () => {
   // Sample order data - in a real app, this would come from an API based on the ID
@@ -96,7 +96,7 @@ const ViewOrderPage: NextPage = () => {
                   href="/admin/orders"
                   className="mr-4 text-gray-400 hover:text-gray-500"
                 >
-                  <ArrowLeftIcon className="h-5 w-5" />
+                  <ArrowLeft className="h-5 w-5" />
                 </Link>
                 <h1 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
                   Order #{order.id}
@@ -110,11 +110,11 @@ const ViewOrderPage: NextPage = () => {
                   <span>Placed on {order.date}</span>
                 </div>
                 <div className="mt-2 flex items-center text-sm text-gray-500">
-                  <CreditCardIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" />
+                  <CreditCard className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" />
                   <span>{order.paymentMethod}</span>
                 </div>
                 <div className="mt-2 flex items-center text-sm text-gray-500">
-                  <TruckIcon className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" />
+                  <Truck className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" />
                   <span>{order.shippingMethod}</span>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const ViewOrderPage: NextPage = () => {
                 type="button"
                 className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
-                <PrinterIcon className="-ml-1 mr-2 h-5 w-5 text-gray-500" />
+                <Printer className="-ml-1 mr-2 h-5 w-5 text-gray-500" />
                 Print
               </button>
               {order.status === 'Processing' && (
@@ -351,7 +351,7 @@ const ViewOrderPage: NextPage = () => {
                     <div className="relative flex space-x-3">
                       <div>
                         <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                          <TruckIcon className="h-5 w-5 text-white" />
+                          <Truck className="h-5 w-5 text-white" />
                         </span>
                       </div>
                       <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
@@ -375,7 +375,7 @@ const ViewOrderPage: NextPage = () => {
                     <div className="relative flex space-x-3">
                       <div>
                         <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-                          <CreditCardIcon className="h-5 w-5 text-white" />
+                          <CreditCard className="h-5 w-5 text-white" />
                         </span>
                       </div>
                       <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">
@@ -396,19 +396,7 @@ const ViewOrderPage: NextPage = () => {
                     <div className="relative flex space-x-3">
                       <div>
                         <span className="h-8 w-8 rounded-full bg-gray-500 flex items-center justify-center ring-8 ring-white">
-                          <svg
-                            className="h-5 w-5 text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <Clock className="h-5 w-5 text-white" />
                         </span>
                       </div>
                       <div className="flex min-w-0 flex-1 justify-between space-x-4 pt-1.5">

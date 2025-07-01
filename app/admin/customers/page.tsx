@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { PencilIcon, TrashIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { Plus } from 'lucide-react'
 import CustomersTable from './CustomersTable'
 import { Search } from 'lucide-react'
 
@@ -72,9 +72,9 @@ const AdminCustomers: NextPage = () => {
   ]
 
   const deleteCustomer = (id: string) => {
-    // In a real app, this would call an API to delete the customer
+
     console.log(`Deleting customer ${id}`)
-    // Then update the customers list
+   
   }
 
   return (
@@ -96,7 +96,7 @@ const AdminCustomers: NextPage = () => {
             <div className="mt-4 flex md:mt-0 md:ml-4">
               <Link href="/admin/customers/create"
                 className="ml-3 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                <PlusIcon className="-ml-1 mr-2 h-5 w-5" />
+                <Plus className="-ml-1 mr-2 h-5 w-5" />
                 Add Customer
               </Link>
             </div>

@@ -2,7 +2,7 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
-import { ArrowLeftIcon } from '@heroicons/react/24/outline'
+import { ArrowLeft } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 // Mock customer data - replace with actual API call
@@ -78,7 +78,7 @@ const EditCustomerPage: NextPage = () => {
                   href="/admin/customers"
                   className="mr-4 text-gray-400 hover:text-gray-500"
                 >
-                  <ArrowLeftIcon className="h-5 w-5" />
+                  <ArrowLeft className="h-5 w-5" />
                 </Link>
                 <div>
                   <h1 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">

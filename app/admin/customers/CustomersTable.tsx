@@ -1,6 +1,6 @@
 'use client'
 import Pagination from "@/components/pagination"
-import { PencilIcon, TrashIcon } from "@heroicons/react/24/outline"
+import { Pencil, Trash2 } from "lucide-react"
 import Link from "next/link"
 
 interface Customer {
@@ -16,7 +16,6 @@ interface Customer {
 
 export default function CustomersTable({ customers }: { customers: Customer[] }) {
   const deleteCustomer = (id: string) => {
-    // In a real app, this would call an API to delete the customer
     console.log(`Deleting customer ${id}`)
     // Then update the customers list
   }
@@ -122,13 +121,13 @@ export default function CustomersTable({ customers }: { customers: Customer[] })
                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <Link href={`/admin/customers/${customer.id}/edit`}
                     className="text-indigo-600 hover:text-indigo-900 mr-4">
-                    <PencilIcon className="h-5 w-5 inline" />
+                    <Pencil className="h-5 w-5 inline" />
                   </Link>
                   <button
                     onClick={() => deleteCustomer(customer.id)}
                     className="text-red-600 hover:text-red-900"
                   >
-                    <TrashIcon className="h-5 w-5 inline" />
+                    <Trash2 className="h-5 w-5 inline" />
                   </button>
                 </td>
               </tr>
