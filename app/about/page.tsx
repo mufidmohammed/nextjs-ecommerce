@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { SocialIcons } from '@/components/socials'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import { Clock, ClockIcon, Cloud, ShieldCheck, Zap } from 'lucide-react'
 
 const About: NextPage = () => {
   const teamMembers = [
@@ -182,18 +183,7 @@ const About: NextPage = () => {
                     <div className="relative flex space-x-3">
                       <div>
                         <span className="h-8 w-8 rounded-full bg-indigo-500 flex items-center justify-center ring-8 ring-white">
-                          <svg
-                            className="h-5 w-5 text-white"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
+                          <Clock className="h-5 w-5 text-white" aria-hidden="true" />
                         </span>
                       </div>
                       <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
@@ -231,20 +221,7 @@ const About: NextPage = () => {
             <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
               <div className="relative">
                 <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
+                  <Zap className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
                   Audio Excellence
@@ -256,20 +233,7 @@ const About: NextPage = () => {
 
               <div className="relative">
                 <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                    />
-                  </svg>
+                  <Cloud className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
                   Customer Focus
@@ -281,20 +245,7 @@ const About: NextPage = () => {
 
               <div className="relative">
                 <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <svg
-                    className="h-6 w-6"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
+                  <ShieldCheck className="h-6 w-6" aria-hidden="true" />
                 </div>
                 <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
                   Innovation
@@ -335,6 +286,7 @@ const About: NextPage = () => {
           </div>
         </div>
       </div>
+      
       <Footer />
     </>
   )
