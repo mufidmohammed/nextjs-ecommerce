@@ -70,9 +70,6 @@ const AdminDashboard: NextPage = () => {
                 <dd className="mt-1 flex items-baseline justify-between md:block lg:flex">
                   <div className="flex items-baseline text-2xl font-semibold text-indigo-600">
                     {stat.value}
-                    <span className="ml-2 text-sm font-medium text-gray-500">
-                      from last week
-                    </span>
                   </div>
                   <div
                     className={`inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium md:mt-2 lg:mt-0 ${stat.changeType === 'positive'
@@ -83,6 +80,9 @@ const AdminDashboard: NextPage = () => {
                     {stat.change}
                   </div>
                 </dd>
+                <span className="text-sm font-medium text-gray-500">
+                  from last week
+                </span>
               </div>
             ))}
           </div>
@@ -226,7 +226,7 @@ const AdminDashboard: NextPage = () => {
               </div>
               <div className="px-4 py-5 sm:p-6">
                 <div className="grid grid-cols-2 gap-4">
-                  <Link href="/admin/products/new"
+                  <Link href="/admin/products/create"
                     className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
                     Add Product
                   </Link>

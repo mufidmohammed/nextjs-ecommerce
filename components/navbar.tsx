@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
+import { User } from 'lucide-react'
 
 export default function Navbar() {
 
@@ -75,6 +76,15 @@ export default function Navbar() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
               </svg>
             </Link>
+            <Link
+                href="/admin"
+                className="ml-4 bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none 
+                focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <div className="flex flex-col items-center justify-center">
+                  <User className="h-6 w-6" />
+                  <span className="text-sm">Admin</span>
+                </div>
+              </Link>
           </div>
         </div>
       </div>
